@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience",
+    "description": "A work experience entry."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "jobTitle": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "location": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "startDate": {
+      "type": "date",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "endDate": {
+      "type": "date",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "isCurrent": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "bullets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.bullet",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "pluginOptions": { "i18n": { "localized": false } }
+    }
+  }
+}

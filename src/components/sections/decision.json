@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_decisions",
+  "info": {
+    "displayName": "Decision",
+    "icon": "crossCircle",
+    "description": "A design decision in a case study: what was chosen, why, and what was rejected."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "reasoning": {
+      "type": "text"
+    },
+    "rejectedAlternative": {
+      "type": "text"
+    }
+  }
+}

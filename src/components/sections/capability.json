@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_capabilities",
+  "info": {
+    "displayName": "Capability",
+    "icon": "layer",
+    "description": "A capability block on the home page: title, description, and a list of items."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "json"
+    }
+  }
+}

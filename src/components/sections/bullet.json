@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_bullets",
+  "info": {
+    "displayName": "Bullet",
+    "icon": "bulletList",
+    "description": "A single bullet point of text."
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

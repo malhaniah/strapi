@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": "Home page hero and capabilities."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "heroHeading": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "heroSubheading": {
+      "type": "text",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "primaryCtaLabel": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "secondaryCtaLabel": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "capabilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.capability",
+      "pluginOptions": { "i18n": { "localized": true } }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global",
+    "description": "Site-wide identity, contact details, and navigation labels."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "roleLine": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "positioning": {
+      "type": "text",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "email": {
+      "type": "email",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "phone": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "location": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "linkedinUrl": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "githubUrl": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "cvFile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["files"],
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "navWork": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "navAbout": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "navContact": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    }
+  }
+}
