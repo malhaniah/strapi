@@ -13,7 +13,8 @@
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "types": "strapi ts:generate-types"
   },
   "dependencies": {
     "@strapi/database": "5.52.3",
@@ -21,7 +22,6 @@
     "@strapi/plugin-users-permissions": "5.52.3",
     "@strapi/provider-upload-cloudinary": "^5.52.3",
     "@strapi/strapi": "5.52.3",
-    "better-sqlite3": "12.8.0",
     "pg": "^8.23.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -35,11 +35,14 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=20.0.0 <=26.x.x",
+    "node": ">=20.0.0 <=24.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
     "uuid": "2b26202b-417d-49d0-8996-7cc0a9169ac9",
     "installId": "cc3ce8a2d74bcb3754d2f46d289f3ace144c0c797cecaddac44ff7841c0b6761"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "12.8.0"
   }
 }

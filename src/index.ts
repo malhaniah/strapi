@@ -34,8 +34,9 @@ const PUBLIC_ACTIONS: ReadonlyArray<string> = [
  * named `next-revalidate` and reconcile it from env on every boot:
  *   REVALIDATE_WEBHOOK_URL     e.g. https://your-site.com/api/revalidate
  *   REVALIDATE_WEBHOOK_SECRET  shared secret, sent as `Authorization: Bearer <secret>`
- * With the URL unset (local dev) the webhook is disabled, never deleted, so a
- * hand-made webhook with another name is left alone.
+ * With the URL unset the webhook is left exactly as it is. This matters when
+ * `npm run seed` runs from a laptop against the Railway database: the seed
+ * boots this bootstrap with local env, and it must not touch production state.
  *
  * `entry.update` is included because single types (global, home) have no
  * publish step. The Next.js handler ignores `entry.update` for draft entries
@@ -75,17 +76,11 @@ const ensureRevalidationWebhook = async (strapi: Core.Strapi) => {
   const store = strapi.get('webhookStore') as unknown as WebhookStore;
   const runner = strapi.get('webhookRunner') as unknown as WebhookRunner;
 
-  const existing = (await store.findWebhooks()).find((w) => w.name === REVALIDATE_WEBHOOK_NAME);
-
   if (!url) {
-    if (existing?.isEnabled) {
-      const { id, ...rest } = existing;
-      const updated = await store.updateWebhook(id, { ...rest, isEnabled: false });
-      if (updated) runner.update(updated);
-      strapi.log.info(`[bootstrap] REVALIDATE_WEBHOOK_URL unset; disabled webhook "${REVALIDATE_WEBHOOK_NAME}"`);
-    }
     return;
   }
+
+  const existing = (await store.findWebhooks()).find((w) => w.name === REVALIDATE_WEBHOOK_NAME);
 
   if (!secret) {
     throw new Error('REVALIDATE_WEBHOOK_URL is set but REVALIDATE_WEBHOOK_SECRET is missing');

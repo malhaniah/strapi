@@ -5,6 +5,14 @@ import { isDatabaseClientKind } from '@strapi/database';
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database => {
   const client = env('DATABASE_CLIENT', 'sqlite');
 
+  // SQLite lives on the container disk, which Railway wipes on every redeploy.
+  // Fail loudly instead of silently losing all content in production.
+  if (env('NODE_ENV') === 'production' && client === 'sqlite') {
+    throw new Error(
+      'DATABASE_CLIENT is "sqlite" (or unset) while NODE_ENV=production. Set DATABASE_CLIENT=postgres and DATABASE_URL.'
+    );
+  }
+
   if (!isDatabaseClientKind(client)) {
     throw new Error(
       `Unsupported DATABASE_CLIENT: ${client}. Use "postgres", "mysql", or "sqlite".`

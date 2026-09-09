@@ -208,8 +208,8 @@ Behaviour, all verified:
   or enabled flag differ. Unchanged env logs nothing.
 - Rotating the secret updates the stored `Authorization` header on next boot.
 - URL set but secret missing: boot fails with a clear error.
-- URL unset (local dev): the webhook is **disabled**, never deleted, and a
-  webhook with any other name is left alone.
+- URL unset (local dev, or `npm run seed` run from a laptop against Railway):
+  the webhook is left untouched. Nothing else in the admin is affected.
 
 You will see it under **Settings → Webhooks** in the admin. Edits made there
 are overwritten on the next boot; change the env instead.
