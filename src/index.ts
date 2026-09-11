@@ -193,8 +193,34 @@ const assertDatabaseConfig = (strapi: Core.Strapi) => {
   }
 };
 
+/**
+ * The six secrets Strapi needs. Strapi itself only complains about them one
+ * at a time and only once the previous one is fixed; report them all at once.
+ * Values must be generated once and never rotated (see .env.example).
+ */
+const REQUIRED_SECRETS = [
+  'APP_KEYS',
+  'ADMIN_JWT_SECRET',
+  'API_TOKEN_SALT',
+  'TRANSFER_TOKEN_SALT',
+  'JWT_SECRET',
+  'ENCRYPTION_KEY',
+] as const;
+
+const assertSecrets = () => {
+  const missing = REQUIRED_SECRETS.filter((name) => !process.env[name]?.trim());
+  if (missing.length > 0) {
+    throw new Error(
+      `Missing required secret env vars: ${missing.join(', ')}. ` +
+        'Generate each once with: node -e "console.log(require(\'crypto\').randomBytes(16).toString(\'base64\'))" ' +
+        '(APP_KEYS is a comma-separated list of four such values). Set them on the Railway service and never regenerate them.'
+    );
+  }
+};
+
 export default {
   register({ strapi }: { strapi: Core.Strapi }) {
+    assertSecrets();
     assertDatabaseConfig(strapi);
   },
 
