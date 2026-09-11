@@ -84,7 +84,7 @@ const GLOBAL = {
     name: 'محمد الغامدي',
     roleLine: 'مصمم واجهات وتجربة مستخدم — أنظمة التصميم وتطوير الواجهات الأمامية',
     positioning:
-      'أعمل عند نقطة التقاء التصميم والبرمجة: أبني أنظمة تصميم قابلة للتوسّع، وأحوّلها إلى واجهات جاهزة للإنتاج تراعي اللغة العربية واتجاه القراءة من اليمين إلى اليسار منذ اللحظة الأولى، لا كإضافة لاحقة.',
+      'أعمل عند نقطة التقاء التصميم والبرمجة: أبني أنظمة تصميم قابلة للتوسّع، وأحوّلها بنفسي إلى واجهات جاهزة للإنتاج، فلا يضيع شيء بين ملف التصميم والكود.',
     location: 'الرياض، المملكة العربية السعودية',
     navWork: 'الأعمال',
     navAbout: 'نبذة عني',
@@ -94,7 +94,7 @@ const GLOBAL = {
     name: 'Mohammed Alghamdi',
     roleLine: 'UI/UX Designer — Design Systems & Front-End Development',
     positioning:
-      'I work where design meets code: building scalable design systems and turning them into production-ready interfaces, with Arabic and right-to-left reading treated as a first-class requirement rather than an afterthought.',
+      'I work where design meets code: building scalable design systems and turning them into production-ready interfaces myself, so nothing gets lost between the design file and the codebase.',
     location: 'Riyadh, Saudi Arabia',
     navWork: 'Work',
     navAbout: 'About',
@@ -106,18 +106,18 @@ const HOME = {
   ar: {
     heroHeading: 'أصمّم الواجهات، وأبني الأنظمة التي تقف خلفها.',
     heroSubheading:
-      'مصمم واجهات وتجربة مستخدم في الرياض بخلفية في تطوير الواجهات الأمامية، متخصص في المنتجات العربية أولاً، وأنظمة التصميم، ولوحات البيانات كثيفة المعلومات.',
+      'مصمم واجهات وتجربة مستخدم في الرياض بخلفية في تطوير الواجهات الأمامية، متخصص في أنظمة التصميم ولوحات البيانات كثيفة المعلومات.',
     primaryCtaLabel: 'استعرض دراسات الحالة',
     secondaryCtaLabel: 'تواصل معي',
     capabilities: [
       {
         title: 'تصميم المنتجات والواجهات',
         description:
-          'تصميم تجربة وواجهة المستخدم من البحث ورسم المسارات وصولاً إلى الشاشات النهائية عالية الدقة، مع مراعاة اتجاه القراءة من اليمين إلى اليسار والتخطيطات ثنائية اللغة منذ البداية.',
+          'تصميم تجربة وواجهة المستخدم من البحث ورسم المسارات وصولاً إلى الشاشات النهائية عالية الدقة، بمحتوى حقيقي وقيود حقيقية لا بنماذج مثالية.',
         items: [
           'مسارات المستخدم والنماذج الأولية',
           'واجهات عالية الدقة في Figma',
-          'تخطيطات عربية RTL وثنائية اللغة',
+          'النماذج الأولية واختبارات الاستخدام',
           'تصوير البيانات ولوحات المعلومات',
         ],
       },
@@ -135,11 +135,11 @@ const HOME = {
       {
         title: 'تطوير الواجهات الأمامية',
         description:
-          'تحويل التصاميم إلى واجهات جاهزة للإنتاج: HTML دلالي وCSS وJavaScript وChart.js، مع تنفيذ للمكوّنات يراعي اتجاه RTL.',
+          'تحويل التصاميم إلى واجهات جاهزة للإنتاج: HTML دلالي وCSS وJavaScript وChart.js، ومكوّنات متجاوبة تراعي إمكانية الوصول.',
         items: [
           'HTML وCSS وJavaScript',
           'Chart.js والواجهات المعتمدة على البيانات',
-          'تنفيذ يراعي اتجاه RTL',
+          'مكوّنات متجاوبة وقابلة للوصول',
           'نسخ تعمل دون اتصال بالإنترنت',
         ],
       },
@@ -148,18 +148,18 @@ const HOME = {
   en: {
     heroHeading: 'I design interfaces and build the systems behind them.',
     heroSubheading:
-      'UI/UX designer in Riyadh with a front-end background, specialising in Arabic-first products, design systems, and data-heavy dashboards.',
+      'UI/UX designer in Riyadh with a front-end background, specialising in design systems and data-heavy product interfaces.',
     primaryCtaLabel: 'View case studies',
     secondaryCtaLabel: 'Get in touch',
     capabilities: [
       {
         title: 'Product & interface design',
         description:
-          'End-to-end UI/UX from research and flows to high-fidelity screens, with RTL and bilingual layouts designed in from the start.',
+          'End-to-end UI/UX from research and flows to high-fidelity screens, designed around real content and real constraints rather than ideal cases.',
         items: [
           'User flows & wireframes',
           'High-fidelity UI in Figma',
-          'Arabic RTL & bilingual layouts',
+          'Prototyping & usability testing',
           'Data visualisation & dashboards',
         ],
       },
@@ -177,11 +177,11 @@ const HOME = {
       {
         title: 'Front-end development',
         description:
-          'Turning designs into production interfaces: semantic HTML, CSS, JavaScript, Chart.js, and RTL-aware component implementation.',
+          'Turning designs into production interfaces: semantic HTML, CSS, JavaScript, Chart.js, and accessible, responsive components.',
         items: [
           'HTML, CSS & JavaScript',
           'Chart.js & data-driven UI',
-          'RTL-aware implementation',
+          'Accessible, responsive components',
           'Offline-capable builds',
         ],
       },
@@ -198,7 +198,7 @@ const EXPERIENCES = [
       location: 'الرياض',
       bullets: [
         {
-          text: 'صمّمت لوحة مؤشرات أداء عربية متعددة الشاشات باتجاه RTL لقطاعات وزارية (الدواجن، بيض المائدة، الثروة الحيوانية)، ونفّذتها باستخدام Chart.js مع خريطة كوروبليث لمناطق المملكة.',
+          text: 'صمّمت لوحة مؤشرات أداء متعددة الشاشات لقطاعات وزارية (الدواجن، بيض المائدة، الثروة الحيوانية)، ونفّذتها باستخدام Chart.js مع خريطة كوروبليث لمناطق المملكة.',
         },
         {
           text: 'وثّقت نظام التصميم الخاص بتطبيق NSG Maps وأنتجت المواد التسويقية لمتاجر التطبيقات للسوق السعودي.',
@@ -214,7 +214,7 @@ const EXPERIENCES = [
       location: 'Riyadh',
       bullets: [
         {
-          text: 'Designed a multi-screen Arabic RTL KPI dashboard for ministry sectors (poultry, table eggs, livestock) and built it with Chart.js and a Saudi regional choropleth.',
+          text: 'Designed a multi-screen KPI dashboard for ministry sectors (poultry, table eggs, livestock) and built it with Chart.js and a Saudi regional choropleth.',
         },
         {
           text: 'Documented the NSG Maps design system and produced app-store marketing assets for the Saudi market.',
@@ -262,20 +262,20 @@ const CASE_STUDIES = [
     ar: {
       title: 'لوحة مؤشرات الأداء لقطاعات الوزارة',
       summary:
-        'لوحة تحليلات عربية أولاً بعدة شاشات وباتجاه RTL لمتابعة مؤشرات الأداء الرئيسية لقطاعات الدواجن وبيض المائدة والثروة الحيوانية، مبنية بـ Chart.js مع خريطة كوروبليث لمناطق المملكة وتتبّع كامل للمتطلبات وفق وثيقة متطلبات العمل (BRD).',
+        'لوحة تحليلات متعددة الشاشات لمتابعة مؤشرات الأداء الرئيسية لقطاعات الدواجن وبيض المائدة والثروة الحيوانية، مبنية بـ Chart.js مع خريطة كوروبليث لمناطق المملكة وتتبّع كامل للمتطلبات وفق وثيقة متطلبات العمل (BRD).',
       role: 'مصمم واجهات وتجربة مستخدم ومطوّر واجهات أمامية',
-      platform: 'ويب (سطح المكتب)، عربي RTL',
+      platform: 'ويب (سطح المكتب)',
       team: 'NSG للخدمات الجيومكانية',
-      tags: ['لوحة معلومات', 'تصوير البيانات', 'عربي RTL', 'Chart.js', 'نظم المعلومات الجغرافية', 'يعمل دون اتصال'],
+      tags: ['لوحة معلومات', 'تصوير البيانات', 'التحليلات', 'Chart.js', 'نظم المعلومات الجغرافية', 'يعمل دون اتصال'],
       context: blocks(
         'احتاج محللو القطاعات وصنّاع القرار في الوزارة إلى رؤية موحّدة لمؤشرات الإنتاج والإمداد والأسعار عبر قطاعات الدواجن وبيض المائدة والثروة الحيوانية. كانت التقارير القائمة موزّعة بين جداول بيانات وملفات مصدَّرة ثابتة، دون أي تفصيل على مستوى المناطق.',
-        'طلب الموجز لوحة معلومات متعددة الشاشات، عربية أولاً وباتجاه من اليمين إلى اليسار في كل تفاصيلها، تضم رسوماً بيانية وجداول وخريطة لمناطق المملكة.'
+        'طلب الموجز لوحة معلومات عربية متعددة الشاشات تضم رسوماً بيانية وجداول وخريطة لمناطق المملكة.'
       ),
       constraints: blocks(
         bulletList([
           'كان يجب أن ترتبط كل شاشة بمتطلب مرقّم في وثيقة متطلبات العمل (BRD)، فكان تتبّع المتطلبات مخرجاً أساسياً لا إضافة اختيارية.',
           'كان على النسخة النهائية أن تعمل دون اتصال بالإنترنت لأغراض العروض التقديمية وفي الشبكات المقيّدة، مما استبعد الاعتماد على شبكات توصيل المحتوى (CDN) أو بلاطات الخرائط الحية.',
-          'دعم الرسوم البيانية لاتجاه RTL ضعيف افتراضياً: اتجاه المحاور، وترتيب مفاتيح الرسم، ومحاذاة التلميحات، وتنسيق الأرقام، كلها احتاجت إلى معالجة مقصودة.',
+          'الإعدادات الافتراضية لمكتبات الرسوم البيانية لا تناسب المحتوى العربي: اتجاه المحاور، وترتيب مفاتيح الرسم، ومحاذاة التلميحات، وتنسيق الأرقام، كلها احتاجت إلى معالجة مقصودة.',
         ])
       ),
       outcome: blocks(
@@ -283,27 +283,27 @@ const CASE_STUDIES = [
         'نسخة قادرة على العمل دون اتصال، تُشغَّل من مجلد محلي دون الحاجة إلى الشبكة.'
       ),
       retrospective: blocks(
-        'أثبتت مصفوفة التتبّع قيمتها في اجتماعات المراجعة: كل سؤال عن سبب وجود عنصر ما كان خلفه رقم متطلب. في المرة القادمة سأبني اصطلاحات الرسوم البيانية لاتجاه RTL كمكتبة مشتركة قبل الشاشة الأولى، بدلاً من حلّها شاشة تلو الأخرى.'
+        'أثبتت مصفوفة التتبّع قيمتها في اجتماعات المراجعة: كل سؤال عن سبب وجود عنصر ما كان خلفه رقم متطلب. في المرة القادمة سأبني اصطلاحات الرسوم البيانية كمكتبة مشتركة قبل الشاشة الأولى، بدلاً من حلّها شاشة تلو الأخرى.'
       ),
       decisions: PLACEHOLDER_DECISIONS.ar,
     },
     en: {
       title: 'Ministry Sector KPI Dashboard',
       summary:
-        'A multi-screen, Arabic-first RTL analytics dashboard tracking poultry, table-egg, and livestock sector KPIs, built with Chart.js, a Saudi regional choropleth, and full BRD requirement traceability.',
+        'A multi-screen analytics dashboard tracking poultry, table-egg, and livestock sector KPIs, built with Chart.js, a Saudi regional choropleth, and full BRD requirement traceability.',
       role: 'UI/UX Designer & Front-End Developer',
-      platform: 'Web (desktop), Arabic RTL',
+      platform: 'Web (desktop)',
       team: 'NSG Geospatial Services',
-      tags: ['Dashboard', 'Data visualisation', 'Arabic RTL', 'Chart.js', 'GIS', 'Offline-first'],
+      tags: ['Dashboard', 'Data visualisation', 'Analytics', 'Chart.js', 'GIS', 'Offline-first'],
       context: blocks(
         'Sector analysts and decision-makers at the ministry needed a single view of production, supply, and price indicators across the poultry, table-egg, and livestock sectors. Existing reporting lived in spreadsheets and static exports, with no regional breakdown.',
-        'The brief called for a multi-screen dashboard that is Arabic-first and right-to-left throughout, with charts, tables, and a map of Saudi regions.'
+        'The brief called for a multi-screen Arabic dashboard with charts, tables, and a map of Saudi regions.'
       ),
       constraints: blocks(
         bulletList([
           'Every screen had to map back to a numbered requirement in the Business Requirements Document, so requirement traceability was a deliverable, not a nice-to-have.',
           'The build had to run offline for demonstrations and on restricted networks, which ruled out CDN dependencies and live map tiles.',
-          'RTL charts are poorly supported by default: axis direction, legend order, tooltip alignment, and number formatting all had to be handled deliberately.',
+          'Charting defaults do not suit Arabic content: axis direction, legend order, tooltip alignment, and number formatting all had to be handled deliberately.',
         ])
       ),
       outcome: blocks(
@@ -311,7 +311,7 @@ const CASE_STUDIES = [
         'An offline-capable build that runs from a local folder with no network access.'
       ),
       retrospective: blocks(
-        "The traceability matrix paid for itself in review meetings: every question about 'why is this here' had a requirement ID behind it. Next time I would build the RTL chart conventions as a shared library before the first screen, rather than solving them screen by screen."
+        "The traceability matrix paid for itself in review meetings: every question about 'why is this here' had a requirement ID behind it. Next time I would build the chart conventions as a shared library before the first screen, rather than solving them screen by screen."
       ),
       decisions: PLACEHOLDER_DECISIONS.en,
     },
