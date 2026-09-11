@@ -166,8 +166,37 @@ const syncPublicPermissions = async (strapi: Core.Strapi) => {
   }
 };
 
+/**
+ * Database sanity checks. These run in `register`, which executes at runtime
+ * before Strapi opens a connection and is never called by `strapi build`, so a
+ * build can succeed without any database variables while a misconfigured
+ * container still fails with a message naming the missing variable instead
+ * of an opaque "AggregateError".
+ */
+const assertDatabaseConfig = (strapi: Core.Strapi) => {
+  const client = strapi.config.get('database.connection.client') as string;
+  const isProduction = process.env.NODE_ENV === 'production';
+
+  if (isProduction && client === 'sqlite') {
+    throw new Error(
+      'DATABASE_CLIENT is "sqlite" (or unset) while NODE_ENV=production. SQLite lives on the container disk, ' +
+        'which Railway wipes on every redeploy. Set DATABASE_CLIENT=postgres and DATABASE_URL.'
+    );
+  }
+
+  if (client === 'postgres' && !process.env.DATABASE_URL && !process.env.DATABASE_HOST) {
+    throw new Error(
+      'DATABASE_CLIENT=postgres but neither DATABASE_URL nor DATABASE_HOST is set, so the driver would try localhost:5432. ' +
+        'On Railway, add DATABASE_URL as a reference to the Postgres service, e.g. ${{Postgres.DATABASE_URL}}, ' +
+        'and confirm it resolves to a postgresql:// URL in the Variables tab.'
+    );
+  }
+};
+
 export default {
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register({ strapi }: { strapi: Core.Strapi }) {
+    assertDatabaseConfig(strapi);
+  },
 
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
     await ensureLocales(strapi);

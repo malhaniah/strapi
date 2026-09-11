@@ -5,24 +5,6 @@ import { isDatabaseClientKind } from '@strapi/database';
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database => {
   const client = env('DATABASE_CLIENT', 'sqlite');
 
-  // SQLite lives on the container disk, which Railway wipes on every redeploy.
-  // Fail loudly instead of silently losing all content in production.
-  if (env('NODE_ENV') === 'production' && client === 'sqlite') {
-    throw new Error(
-      'DATABASE_CLIENT is "sqlite" (or unset) while NODE_ENV=production. Set DATABASE_CLIENT=postgres and DATABASE_URL.'
-    );
-  }
-
-  // Without a URL or host the pg driver silently tries localhost:5432 and dies
-  // with an opaque "AggregateError". Name the missing variable instead.
-  if (client === 'postgres' && !env('DATABASE_URL') && !env('DATABASE_HOST')) {
-    throw new Error(
-      'DATABASE_CLIENT=postgres but neither DATABASE_URL nor DATABASE_HOST is set. ' +
-        'On Railway, add DATABASE_URL as a reference to the Postgres service, e.g. ${{Postgres.DATABASE_URL}}, ' +
-        'and confirm the reference resolves to a postgresql:// URL in the Variables tab.'
-    );
-  }
-
   if (!isDatabaseClientKind(client)) {
     throw new Error(
       `Unsupported DATABASE_CLIENT: ${client}. Use "postgres", "mysql", or "sqlite".`
