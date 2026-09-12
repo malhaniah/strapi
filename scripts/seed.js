@@ -428,6 +428,173 @@ const CASE_STUDIES = [
       decisions: PLACEHOLDER_DECISIONS.en,
     },
   },
+  {
+    shared: { slug: 'energy-committee-map', year: '2025', order: 4, featured: false },
+    ar: {
+      title: 'خريطة لجنة الطاقة',
+      summary:
+        'خريطة تفاعلية لتحليل تدفّق الطاقة في المملكة: النفط والغاز والكهرباء وما يرتبط بها من منشآت وشبكات، في عرض واحد على مستوى المملكة.',
+      role: 'مصمم واجهات وتجربة مستخدم',
+      platform: 'ويب (سطح المكتب)، بوابة جيومكانية',
+      team: 'NSG للخدمات الجيومكانية',
+      tags: ['نظم المعلومات الجغرافية', 'الطاقة', 'تحليل مكاني', 'لوحة معلومات', 'خرائط'],
+      context: blocks(
+        'احتاجت لجنة الطاقة إلى فهم كيف تتدفّق الطاقة عبر المملكة: من مواقع الإنتاج والمعالجة إلى شبكات النقل ومحطات التوليد ونقاط الاستهلاك، وذلك عبر قطاعات النفط والغاز والكهرباء معاً لا كل قطاع على حدة.',
+        'كانت البيانات موجودة لكنها موزّعة بين جهات وصيغ مختلفة، ولم يكن هناك عرض موحّد يجيب عن سؤال بسيط: ماذا يحدث هنا، وكيف يرتبط بما حوله؟'
+      ),
+      constraints: blocks(
+        bulletList([
+          'طبقات كثيرة على خريطة واحدة (خطوط أنابيب، شبكات كهرباء، منشآت، مناطق) تتنافس على الانتباه، فكان تسلسل الإظهار والرموز أهم قرار تصميمي.',
+          'الجمهور مختلط: خبراء قطاع يريدون التفاصيل، وصنّاع قرار يريدون الصورة الكبيرة في ثوانٍ.',
+        ])
+      ),
+      outcome: blocks(
+        'خريطة تفاعلية تجمع قطاعات الطاقة في عرض واحد على مستوى المملكة، بطبقات قابلة للتبديل ولوحات جانبية تُظهر التفاصيل عند اختيار أي عنصر.',
+        'نظام رموز وألوان موحّد لأنواع الطاقة والمنشآت يبقى مقروءاً مع تراكم الطبقات.'
+      ),
+      retrospective: blocks(
+        'الدرس الأهم: في الخرائط كثيفة البيانات، ما تخفيه افتراضياً أهم مما تُظهره. الإصدارات الأولى عرضت كل شيء، والأخيرة بدأت بالصورة الكبيرة وتركت التفاصيل للطلب.'
+      ),
+      decisions: PLACEHOLDER_DECISIONS.ar,
+    },
+    en: {
+      title: 'Energy Committee Map',
+      summary:
+        'An interactive map for analysing how energy flows across Saudi Arabia: oil, gas, and power, with their facilities and networks, in one national view.',
+      role: 'UI/UX Designer',
+      platform: 'Web (desktop), geospatial portal',
+      team: 'NSG Geospatial Services',
+      tags: ['GIS', 'Energy', 'Spatial analysis', 'Dashboard', 'Maps'],
+      context: blocks(
+        'The energy committee needed to understand how energy moves through the Kingdom: from production and processing sites through transmission networks to generation plants and points of consumption, across oil, gas, and power together rather than one sector at a time.',
+        'The data existed but was spread across agencies and formats, with no single view that answered a simple question: what is happening here, and how does it connect to what is around it?'
+      ),
+      constraints: blocks(
+        bulletList([
+          'Many layers on one map (pipelines, power grids, facilities, regions) compete for attention, so layer ordering and symbology became the most important design decision.',
+          'A mixed audience: sector specialists who want detail, and decision-makers who want the big picture in seconds.',
+        ])
+      ),
+      outcome: blocks(
+        'An interactive map that brings the energy sectors into a single national view, with toggleable layers and side panels that reveal detail when any element is selected.',
+        'A unified symbol and colour system for energy types and facilities that stays legible as layers stack up.'
+      ),
+      retrospective: blocks(
+        'The main lesson: on data-dense maps, what you hide by default matters more than what you show. Early versions showed everything; the final one starts with the big picture and leaves detail on demand.'
+      ),
+      decisions: PLACEHOLDER_DECISIONS.en,
+    },
+  },
+  {
+    shared: { slug: 'hail-development-authority-gis-portal', year: '2025', order: 5, featured: false },
+    ar: {
+      title: 'بوابة نظم المعلومات الجغرافية لمنطقة حائل',
+      summary:
+        'بوابة جيومكانية لهيئة تطوير منطقة حائل تجمع البيانات المكانية للمنطقة في مكان واحد لدعم التخطيط والتطوير.',
+      role: 'مصمم واجهات وتجربة مستخدم',
+      platform: 'ويب (سطح المكتب)، بوابة جيومكانية',
+      team: 'NSG للخدمات الجيومكانية',
+      tags: ['نظم المعلومات الجغرافية', 'بوابة', 'التخطيط الإقليمي', 'حائل', 'خرائط'],
+      context: blocks(
+        'تحتاج هيئة تطوير منطقة حائل إلى رؤية مكانية موحّدة للمنطقة: الحدود الإدارية، والبنية التحتية، والمشاريع، والخدمات، ليستند التخطيط والتطوير إلى خريطة واحدة يشترك فيها الجميع.',
+        'تولّيت تصميم البوابة من هيكلها المعلوماتي إلى شاشاتها النهائية: كيف يُستكشف المحتوى، وكيف تُدار الطبقات، وكيف يجد المستخدم ما يبحث عنه دون خبرة في نظم المعلومات الجغرافية.'
+      ),
+      constraints: blocks(
+        bulletList([
+          'المستخدمون موظفون في الهيئة لا متخصصون في الخرائط، فكان على أدوات البوابة أن تبدو كأدوات عمل مألوفة لا كبرنامج GIS.',
+          'محتوى عربي أولاً بواجهة تُستخدم يومياً، فكانت الوضوح والاتساق أهم من أي عنصر بصري لافت.',
+        ])
+      ),
+      outcome: blocks(
+        'بوابة جيومكانية بواجهة موحّدة لاستكشاف طبقات المنطقة والبحث والتصفية وعرض التفاصيل، مبنية على نظام تصميم قابل لإعادة الاستخدام في بوابات مشابهة.'
+      ),
+      retrospective: blocks(
+        'أكثر ما أثّر في جودة النتيجة كان جلسات المراجعة مع مستخدمين حقيقيين من الهيئة مبكراً؛ افتراضاتنا عن "المهام الشائعة" لم تصمد أمام أول جلسة.'
+      ),
+      decisions: PLACEHOLDER_DECISIONS.ar,
+    },
+    en: {
+      title: 'Hail Region GIS Portal',
+      summary:
+        'A geospatial portal for the Hail Development Authority that brings the region’s spatial data into one place to support planning and development.',
+      role: 'UI/UX Designer',
+      platform: 'Web (desktop), geospatial portal',
+      team: 'NSG Geospatial Services',
+      tags: ['GIS', 'Portal', 'Regional planning', 'Hail', 'Maps'],
+      context: blocks(
+        'The Hail Development Authority needed a single spatial view of the region: administrative boundaries, infrastructure, projects, and services, so that planning and development decisions rest on one shared map.',
+        'I designed the portal from its information architecture to its final screens: how content is explored, how layers are managed, and how a user finds what they need without GIS expertise.'
+      ),
+      constraints: blocks(
+        bulletList([
+          'Users are authority staff, not mapping specialists, so the portal’s tools had to feel like familiar work tools rather than GIS software.',
+          'Arabic-first content in an interface used daily, where clarity and consistency mattered more than any visual flourish.',
+        ])
+      ),
+      outcome: blocks(
+        'A geospatial portal with a unified interface for exploring the region’s layers, searching, filtering, and viewing details, built on a design system reusable across similar portals.'
+      ),
+      retrospective: blocks(
+        'What improved the result most was reviewing early with real users from the authority; our assumptions about the "common tasks" did not survive the first session.'
+      ),
+      decisions: PLACEHOLDER_DECISIONS.en,
+    },
+  },
+  {
+    shared: { slug: 'ministry-of-tourism-gis-portal', year: '2025', order: 6, featured: false },
+    ar: {
+      title: 'بوابة نظم المعلومات الجغرافية لوزارة السياحة',
+      summary:
+        'بوابة جيومكانية لوزارة السياحة تعرض مؤشرات القطاع على الخريطة: منشآت الإيواء، والكثافة السكانية، وغيرها من طبقات دعم القرار.',
+      role: 'مصمم واجهات وتجربة مستخدم',
+      platform: 'ويب (سطح المكتب)، بوابة جيومكانية',
+      team: 'NSG للخدمات الجيومكانية',
+      tags: ['نظم المعلومات الجغرافية', 'السياحة', 'بوابة', 'تصوير البيانات', 'خرائط'],
+      context: blocks(
+        'احتاجت وزارة السياحة إلى قراءة القطاع مكانياً: أين تتركّز منشآت الإيواء، وكيف تتوزّع مقارنةً بالكثافة السكانية والوجهات، وأين الفجوات التي تستحق الاستثمار.',
+        'صمّمت البوابة وطبقاتها الرئيسية، من طريقة عرض المؤشرات على الخريطة إلى لوحات التفاصيل والمقارنة بين المناطق.'
+      ),
+      constraints: blocks(
+        bulletList([
+          'مؤشرات بمقاييس مختلفة (أعداد، نسب، كثافات) على الخريطة نفسها، فكان اختيار طريقة التمثيل لكل مؤشر جزءاً من التصميم لا تفصيلاً تقنياً.',
+          'يجب أن تعمل البوابة لعرض سريع في اجتماع ولتحليل متعمّق على حد سواء.',
+        ])
+      ),
+      outcome: blocks(
+        'بوابة جيومكانية بطبقات لمنشآت الإيواء والكثافة السكانية ومؤشرات أخرى، مع تمثيل بصري مناسب لكل نوع من البيانات ولوحات تفاصيل للمقارنة بين المناطق.'
+      ),
+      retrospective: blocks(
+        'عرض الكثافة السكانية مع منشآت الإيواء على الطبقة نفسها كشف أنماطاً لم تكن ظاهرة في الجداول؛ أحياناً تكون القيمة الحقيقية في التقاطع بين طبقتين لا في أيٍّ منهما وحدها.'
+      ),
+      decisions: PLACEHOLDER_DECISIONS.ar,
+    },
+    en: {
+      title: 'Ministry of Tourism GIS Portal',
+      summary:
+        'A geospatial portal for the Ministry of Tourism that puts sector indicators on the map: accommodation facilities, population density, and other decision-support layers.',
+      role: 'UI/UX Designer',
+      platform: 'Web (desktop), geospatial portal',
+      team: 'NSG Geospatial Services',
+      tags: ['GIS', 'Tourism', 'Portal', 'Data visualisation', 'Maps'],
+      context: blocks(
+        'The Ministry of Tourism needed to read the sector spatially: where accommodation is concentrated, how it is distributed against population density and destinations, and where the gaps worth investing in are.',
+        'I designed the portal and its main layers, from how indicators are rendered on the map to the detail panels and region-to-region comparison.'
+      ),
+      constraints: blocks(
+        bulletList([
+          'Indicators with different scales (counts, rates, densities) on the same map, so choosing the representation for each indicator was part of the design, not a technical detail.',
+          'The portal had to work for a quick look in a meeting and for deep analysis alike.',
+        ])
+      ),
+      outcome: blocks(
+        'A geospatial portal with layers for accommodation facilities, population density, and other indicators, each with a representation suited to its data type, plus detail panels for comparing regions.'
+      ),
+      retrospective: blocks(
+        'Showing population density together with accommodation on the same layer revealed patterns invisible in tables; sometimes the real value is in the intersection of two layers rather than either on its own.'
+      ),
+      decisions: PLACEHOLDER_DECISIONS.en,
+    },
+  },
 ];
 
 // ---------------------------------------------------------------------------
